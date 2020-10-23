@@ -10,11 +10,12 @@
   #define omp_get_num_threads() 1 
 #endif
 
+
+
 /* Como compilar
 
 gcc -o run_00-0 -Wall -O3 exemplo_00-0.c
 gcc -o run_00-0_omp -Wall -O3 -fopenmp exemplo_00-0.c
-
 
 */
 

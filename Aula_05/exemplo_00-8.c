@@ -45,7 +45,7 @@ int main(){
     nThread[nT] = nT;
     carga(delayTime[(2*(nT+1))+1]);
     if(nT == 0) tThreads = omp_get_num_threads();
-    #pragma omp for schedule(static,5) nowait
+    #pragma omp for nowait schedule(static, 5)
     for(int j = 0 ;j < 100; j++){
       x[j] = nT;
       carga(delayTime[(2*(nT+1))+1]);
