@@ -46,7 +46,6 @@ int main(int argc, char * argv[]){
     
     #pragma omp atomic
       integral += integral_loc;
-    double integral_loc = 0.0;
   } 
    
     
