@@ -46,7 +46,7 @@ int main(int argc, char * argv[]){
   integral *= h;
   double integral_fab = int_f(a, b);
   double errAbs = abs(integral_fab - integral);
-  double errRel = errAbs/abs(integral_fab);
+  double errRel = errAbs/abs(integral_fab)*100.0;
   printf(" A integral da função f(x)=x²+1 no \n");
   printf("intervalo de %.2lf a %.2lf pode ser\n", a, b);
   printf("calculada como:\n");
@@ -56,11 +56,11 @@ int main(int argc, char * argv[]){
   printf("  1     |     \n");
   printf("        |%.2lf\n", a);
   printf(" A integral também pode ser estimada\n");
-  printf(" utilizando o método dos trapezios. \n");
+  printf("utilizando o método dos trapezios. \n");
   printf("A estimativa utilizando %d trapezios\n", n);
   printf("Integral = %.8lf\n", integral);
   printf("Erro absoluto: %.10lf\n", errAbs);
-  printf("Erro relativo: %.10lf\n", errRel);
+  printf("Erro relativo: %.2lf\%\n", errRel);
   double stop = omp_get_wtime();
   printf("Tempo total: %.6lf\n", stop -start);
   return 0;
