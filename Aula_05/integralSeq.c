@@ -60,7 +60,7 @@ int main(int argc, char * argv[]){
   printf("A estimativa utilizando %d trapezios\n", n);
   printf("Integral = %.8lf\n", integral);
   printf("Erro absoluto: %.10lf\n", errAbs);
-  printf("Erro relativo: %.2lf\%\n", errRel);
+  printf("Erro relativo: %.2lf%%\n", errRel);
   double stop = omp_get_wtime();
   printf("Tempo total: %.6lf\n", stop -start);
   return 0;
